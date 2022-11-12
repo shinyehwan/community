@@ -21,27 +21,25 @@
     }
 </script>
 
-<form onsubmit="ArticleSave__submitForm(this); return false;">
-
-<form>
-    <div>
-        <span>제목</span>
+<form method="POST" onsubmit="ArticleSave__submitForm(this); return false;">
         <div>
-            <input name="title" type="text" maxlength="50" placeholder="제목을 입력해주세요." />
+            <span>제목</span>
+            <div>
+                <input name="title" type="text" maxlength="50" placeholder="제목을 입력해주세요."/>
+            </div>
         </div>
-    </div>
 
-    <div>
-        <span>내용</span>
         <div>
-            <input name="body" type="text" maxlength="300" placeholder="내용을 입력해주세요." />
+            <span>내용</span>
+            <div>
+                <input name="body" type="text" maxlength="300" placeholder="내용을 입력해주세요."/>
+            </div>
         </div>
-    </div>
 
-    <div>
-        <span>작성</span>
         <div>
-            <input type="submit" value="작성" />
+            <span>작성</span>
+            <div>
+                <input type="submit" value="작성"/>
+            </div>
         </div>
-    </div>
 </form>

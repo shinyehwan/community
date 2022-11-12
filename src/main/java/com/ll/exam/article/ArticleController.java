@@ -7,7 +7,7 @@ import com.ll.exam.Rq;
 import com.ll.exam.article.dto.ArticleDto;
 
 public class ArticleController {
-	public void showArticle(Rq rq) {
+	public void showList(Rq rq) {
 		List<ArticleDto> articleDtos = new ArrayList<>();
 		articleDtos.add(new ArticleDto(5, "제목 5", "내용 5"));
 		articleDtos.add(new ArticleDto(4, "제목 4", "내용 4"));
@@ -21,5 +21,13 @@ public class ArticleController {
 
 	public void showWrite(Rq rq) {
 		rq.view("/usr/article/write");
+	}
+
+	public void doWrite(Rq rq) {
+		String title = rq.getParam("title", "");
+		String body = rq.getParam("body", "");
+
+		rq.appendBody("<div>title : %s</div>".formatted(title));
+		rq.appendBody("<div>body : %s</div>".formatted(body));
 	}
 }
