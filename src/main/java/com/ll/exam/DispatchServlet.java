@@ -22,6 +22,9 @@ public class DispatchServlet extends HttpServlet {
 		MemberController memberController = new MemberController();
 		ArticleController articleController = new ArticleController();
 
+		// getRequestURI는
+		// http://localhost:8081/usr/article/list/free?page=1 에서
+		// /usr/article/list/free 부분만 가져온다.
 		String url = req.getRequestURI();
 
 		switch (url) {
