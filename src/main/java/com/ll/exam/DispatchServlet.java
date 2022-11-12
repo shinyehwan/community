@@ -30,6 +30,8 @@ public class DispatchServlet extends HttpServlet {
 		switch (url) {
 			case ("/usr/article/list/free"):
 				articleController.showArticle(rq);
+			case ("/usr/article/write/free"):
+				articleController.showWrite(rq);
 			case ("/usr/member/login"):
 				memberController.showLogin(rq);
 		}

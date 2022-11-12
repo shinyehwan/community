@@ -18,4 +18,8 @@ public class ArticleController {
 		rq.view("usr/article/list");
 		rq.appendBody("게시물 리스트");
 	}
+
+	public void showWrite(Rq rq) {
+		rq.view("/usr/article/write");
+	}
 }
