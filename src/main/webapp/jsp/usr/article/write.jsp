@@ -25,7 +25,7 @@
         <div>
             <span>제목</span>
             <div>
-                <input name="title" type="text" maxlength="50" placeholder="제목을 입력해주세요."/>
+                <input nam\e="title" type="text" maxlength="50" placeholder="제목을 입력해주세요."/>
             </div>
         </div>
 
