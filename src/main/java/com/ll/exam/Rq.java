@@ -2,9 +2,6 @@ package com.ll.exam;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.List;
-
-import com.ll.exam.article.dto.ArticleDto;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -42,12 +39,16 @@ public class Rq {
 		}
 	}
 
-	public void appendBody(String str) {
+	public void print(String str) {
 		try {
 			resp.getWriter().append(str);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public void println(String str) {
+		print(str + "\n");
 	}
 
 	public void setAttr(String name, Object value) {
